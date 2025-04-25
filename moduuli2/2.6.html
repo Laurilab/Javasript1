@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="target"></h1>
+    <script>
+        function getRandomInt(min, max) {
+          const minCeiled = Math.ceil(min);
+          const maxFloored = Math.floor(max);
+          return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+        }
+        function roll() {
+          result = getRandomInt(1,7)
+          return result;
+        }
+        results = []
+        dice = 0
+        while( dice < 6) {
+          dice = roll()
+          document.querySelector('#target').innerHTML=(dice)
+          results.push(dice)
+        }
+        document.querySelector('#target').innerHTML=(results)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id ='target'></h1>
+    <script>
+          'use strict'
+          let num
+          let square
+          if (confirm('Should I calculate the square root?') == true) {
+            num = parseInt(prompt('Insert number: '));
+              if (num > 0) {
+                square = Math.sqrt(num);
+                document.querySelector('#target').innerHTML = ('The square root is ' + square);
+              } else {
+                  document.querySelector('#target').innerHTML =('invalid number')
+            }
+
+          } else {
+            document.querySelector('#target').innerHTML = ('The square root is not calculated');
+          }
+
+    </script>
+</body>
+</html>
